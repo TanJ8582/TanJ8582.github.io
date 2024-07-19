@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root{
+    --clr: rgb(42,82,190);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1c2630;
+}
+.logo-img{
+   height: 100px; 
+   width: 100px;
+   padding: 0px;
+   margin: 0px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+form{
+    background: #29313c;
+    padding: 60px 80px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+form h2{
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+}
+
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-bottom: 1px;
+    height: 100px;
+}
+
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #999;
+    outline: none;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.inputBox label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.inputBox label span{
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.05em;
+    transition: 0.2s ease-in-out;
+}
+
+.inputBox input:focus ~ label span, .inputBox .input:valid ~ label span{
+    color: var(--clr);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px);
+}
+
+.inputBox input:focus, .input:valid {
+    border-bottom: 2px solid var(--clr);
+}
+
+.inputBox input[type="submit"] {
+    background: var(--clr);
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    color: #1c2630;
+    font-size: 1.15em;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.inputBox input[type="submit"]:hover {
+    letter-spacing: 0.35em;
+}
+
+form p{
+    color: white;
+}
+
+form p a {
+    color: var(--clr);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #29313c;
+    padding: 20px;
+    position: fixed;
+    top: -150%; /* Start off-screen */
+    left: 0;
+    height: 100%;
+    transition: top 0.3s ease;
+}
+
+.sidebar.active {
+    top: 0; /* Slide in from the top */
+}
+
+.sidebar h2 {
+    padding: 30px;
+    color: var(--clr);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--clr);
+}
+
+.sidebar ul li a:hover {
+    color: #000;
+}
+
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}

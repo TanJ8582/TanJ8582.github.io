@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triple J</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style-index.css">
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+               <a class="navbar-brand me-auto" href="#">
+                <img src="iMAGES/Logo.png" alt="Logo" class="logo-img">
+              </a>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="iMAGES/Logo.png" alt="Logo" class="logo-img"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="Shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="Service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="Contact.html">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <form action="https://formsubmit.co/202310891@fit.edu.ph" method="POST">
+              <button id="loginBtn" class="button-color">Login</button>
+              <div id="loginModal" class="modal">
+                  <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <form id="loginForm">
+                          <label for="username">Username:</label>
+                          <input type="text" id="username" name="username" required><br><br>
+                          <label for="password">Password:</label>
+                          <input type="password" id="password" name="password" required><br><br>
+                          <button type="submit" class="button-color">Submit</button>
+                          <a href="create.html" class="create-button">No Account yet Create One ?</a>
+                      </form>
+                  </div>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+        </nav>
+        <section class="hero-section">
+            <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
+                <h1>TRIPLE J TIRE SUPPLY</h1>
+                <h3>"A good set of tires can turn a bumpy ride into a smooth journey."</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur 
+                  eu turpis eget nisl aliquam pretium vitae nec risus.<br> Vivamus interdum, 
+                  odio sed condimentum hendrerit, erat libero porttitor dolor, nec blandit 
+                  urna enim in massa. Nunc facilisis ante auctor ultrices suscipit. 
+                  Curabitur eget tristique tortor. Aenean pellentesque dolor tincidunt 
+                  erat viverra, ac sollicitudin arcu commodo. Phasellus vulputate leo ac mauris feugiat, nec luctus enim blandit. 
+                  Proin interdum enim molestie elit scelerisque vestibulum. Vivamus consequat quam volutpat dolor aliquet tincidunt. 
+                  Aliquam venenatis enim eget tempus pharetra. Vivamus blandit hendrerit enim, quis maximus enim commodo at. 
+                  Phasellus congue lectus id magna sollicitudin lobortis. Phasellus dapibus risus id purus placerat, ac luctus urna auctor. 
+                  Quisque id risus ornare, eleifend metus eu, finibus ex. Quisque ullamcorper ex eget urna auctor, in porta ligula gravida.</br>
+               </p>
+              </div>
+            </section>
+          <footer class="footer">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="footer-logo">
+                    <a href="#">
+                        <img src="iMAGES/Logo.png" alt="Logo" class="footer-logo-img">
+                    </a>
+                </div>
+                <div class="footer-info">
+                    <p>Web Designer: Tan Justine Louis D.</p>
+                    <p>Email: <a href="#">tanj8582@gmail.com</a></p>
+                </div>
+        </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+      </body>
+</head>

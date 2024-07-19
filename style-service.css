@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #1c2630;
+}
+
+header {
+    background-color: #29313c;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.service-section {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.service img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    margin-bottom: 5px;
+    object-fit: cover;
+}
+
+.service .container {
+    padding: 10%;
+}
+
+.service {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    max-width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Add some margin at the bottom */
+}
+
+.service h2 {
+    height: 90px; 
+  width: 90px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.service p {
+    line-height: 1.6;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.container {
+    position: fixed;
+}
+.container img{
+    height: 90px; 
+    width: 90px;
+    padding: 0px;
+    margin: 50px;
+}
+  
+.sidebar {
+    width: 250px;
+    background-color: #29313c;
+    padding: 20px;
+    position: fixed;
+    top: -150%; /* Start off-screen */
+    left: 0;
+    height: 100%;
+    transition: top 0.3s ease;
+}
+
+.sidebar.active {
+    top: 0; /* Slide in from the top */
+}
+
+.sidebar h2 {
+    padding: 35px;
+    color: rgb(42, 82, 190);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgb(42, 82, 190);
+}
+
+.sidebar ul li a:hover {
+    color: #000;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}

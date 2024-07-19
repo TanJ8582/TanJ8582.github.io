@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style-create.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2><img src="iMAGES/Logo.png"></h2>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Service.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <button class="toggle-btn" onclick="toggleSidebar()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </div>
+    <form id="create-account-form" onsubmit="return validatePassword(event)">
+        <img src="iMAGES/Logo.png" alt="Logo" class="logo-img">
+        <h2>New Account</h2>
+        <div class="inputBox">
+            <input type="text" id="username" required>
+            <label>Username/Email</label>
+        </div>
+        <div class="inputBox">
+            <input type="password" id="password" required>
+            <label>New Password</label>
+        </div>
+        <div class="inputBox">
+            <input type="password" id="confirmPassword" required>
+            <label>Confirm New Password</label>
+        </div>
+        <div class="inputBox">
+            <input type="submit" value="Create">
+        </div>
+        <p><a href="index.html">Already have an account</a></p>
+    </form>
+    <script>
+        document.querySelectorAll('label').forEach(label => {
+            label.innerHTML = label.innerText.split('').map(
+                (letters, i) => `<span style="transition-delay: ${i * 50}ms">${letters}</span>`
+            ).join('');
+        });
+        
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+        
+        function validatePassword(event) {
+            event.preventDefault();
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false; // Prevent form submission if passwords don't match
+            }
+
+            // Create account if passwords match
+            const username = document.getElementById('username').value;
+
+            const account = {
+                username: username,
+                password: password
+            };
+            
+            localStorage.setItem('account', JSON.stringify(account));
+            alert('Account created successfully!');
+            return true; // Allow form submission if passwords match
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #1c2630;
+}
+
+header {
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 2px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+h1 ,h2 {
+    color: rgb(42,82,190);
+    padding: 20px 0;
+}
+
+#about-us p, #about-us ul {
+    margin: 8px 0;
+    color: white;
+}
+
+#about-us ul {
+    padding-left: 20px;
+}
+
+#about-us ul li {
+    list-style-type: disc;
+}
+#about-us h2{
+    color: white;
+    font-weight: bold;
+}
+#contact label {
+    color: white;
+}
+container {
+    position: fixed;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #29313c;
+    padding: 20px;
+    position: fixed;
+    top: -150%; /* Start off-screen */
+    left: 0;
+    height: 100%;
+    transition: top 0.3s ease;
+}
+
+.sidebar.active {
+    top: 0; /* Slide in from the top */
+}
+
+.sidebar h2 {
+    padding: 35px;
+    color: rgb(42,82,190);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgb(42,82,190);
+}
+
+.sidebar ul li a:hover {
+    color: #000;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: rgb(42,82,190);
+}

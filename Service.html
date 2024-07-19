@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" type="text/css" href="style-service.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <img src="iMAGES/Logo.png">
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Service.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <button class="toggle-btn" onclick="toggleSidebar()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </div>
+    <header>
+        <h1>Car Services</h1>
+    </header>
+    <section class="services">
+        <div class="service" id="tire-change">
+            <h1><img src="iMAGES/tire change.png" alt="tire-change"></h1>
+            <h2>Tire Change</h2>
+            <p>Ensure your tires are in top condition. We offer professional tire change services to keep you safe on the road.</p>
+            <button onclick="showDetails('tire-details')">Learn More</button>
+            <div class="details" id="tire-details">
+                <p>We inspect the tire condition, replace worn-out tires, and ensure proper alignment.</p>
+            </div>
+        </div>
+        <div class="service" id="oil-change">
+            <h1><img src="iMAGES/Oil Change.png" ></h1>
+            <h2>Oil Change</h2>
+            <p>Regular oil changes are essential for engine health. Our experts use high-quality oil to keep your engine running smoothly.</p>
+            <button onclick="showDetails('oil-details')">Learn More</button>
+            <div class="details" id="oil-details">
+                <p>We drain the old oil, replace the oil filter, and refill with premium oil suited for your car.</p>
+            </div>
+        </div>
+        <div class="service" id="engine-check">
+            <h1><img src="iMAGES/Engine Check.png" alt="tire-change"></h1>
+            <h2>Engine Check</h2>
+            <p>Our comprehensive engine check service ensures your engine is performing at its best.</p>
+            <button onclick="showDetails('engine-details')">Learn More</button>
+            <div class="details" id="engine-details">
+                <p>We perform a full diagnostic, checking for any issues and making necessary adjustments or repairs.</p>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="service" id="maintenance">
+            <h1><img src="iMAGES/Mechanic.png" alt="tire-change"></h1>
+            <h2>Maintenance</h2>
+            <p>Regular Maintenance can make ur car perform well </p>
+            <button onclick="showDetails('maintenance-details')">Learn More</button>
+            <div class="details" id="maintenance-details">
+                <p> Our trusted mechanics can make your car peform well and keeping you safe.</p>
+            </div>
+        </div>
+        <div class="service" id="car-customization">
+                <h1><img src="iMAGES/Customize.png" class="logo-img"></h1>
+                <h2>Car Modifications</h2>
+                <p>Putting modifications  can improve the functionality of your vehicle</p>
+                <button onclick="showDetails('car-customization-details')">Learn More</button>
+                <div class="details" id="car-customization-details">
+                    <p>We Make it cool and stylish</p>
+            </div>
+        </div>
+    </section>
+    <script
+      src= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity= 
+"sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script> 
+    <script src="service.js"></script>
+</body>
+</html>

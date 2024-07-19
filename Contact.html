@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style-contact.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2>Sidebar Title</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Service.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <button class="toggle-btn" onclick="toggleSidebar()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </div>
+    <form action="https://formsubmit.co/202310891@fit.edu.ph" method="POST">
+        <h2>Contact Us</h2>
+        <div class="inputBox">
+            <input type="email" name="email" required>
+            <label>Email</label>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="address" required>
+            <label>Address</label>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="contact_num" required>
+            <label>Contact Number</label>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="Message" rows="5" required>
+            <label>Message</label>
+        </div>
+        <div class="inputBox">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+<script src="contact.js"></script>
+</body>
+</html><section id="contact">
+   

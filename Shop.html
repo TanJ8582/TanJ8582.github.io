@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Shop</title>
+    <link rel="stylesheet" href="style-shop.css">
+</head>
+<body>
+    <header>
+        <h1>Car Battery, Tires & Modifications Shop</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2><img src="iMAGES/Logo.png" alt="Logo" class="logo-img"></h2>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Service.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <button class="toggle-btn" onclick="toggleSidebar()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </div>
+    <main>
+        <aside>
+            <div id="filter">
+                <h2>Search By Tire Brand</h2>
+                <button onclick="searchTires()">Search for Tires</button>
+
+
+                <h2>Tire Brands</h2>
+                <div id="brands">
+                    <input type="checkbox" id="brand1" name="brand1" value="Alliance">
+                    <label for="brand1"> Goodyear</label><br>
+                    <input type="checkbox" id="brand2" name="brand2" value="Apollo">
+                    <label for="brand2"> APOLLO</label><br>
+                    <input type="checkbox" id="brand3" name="brand3" value="Yokohama">
+                    <label for="brand3"> Dunlop</label><br>
+                    <input type="checkbox" id="brand4" name="brand3" value="Yokohama">
+                    <label for="brand3"> Michellin</label><br>
+                    <input type="checkbox" id="brand5" name="brand5" value="Yokohama">
+                    <label for="brand5"> Bridgestone</label><br>
+                    <!-- Add more brands as needed -->
+                </div>
+            </div>
+        </aside>
+
+        <section id="products">
+            <h2>Products</h2>
+            <div class="product" data-id="1">
+                <h3>Yokohama 165/65/R13</h3>
+                <p>₱4,355</p>
+                <button onclick="addToCart(1, 'Yokohama 165/65/R13', 4355)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2">
+                <h3>Yokohama 145/80/R13</h3>
+                <p>₱4,775</p>
+                <button onclick="addToCart(2, 'Yokohama 145/80/R13', 4775)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3">
+                <h3>Dunlop 155/65/R13</h3>
+                <p>₱4,900</p>
+                <button onclick="addToCart(3, 'Dunlop 155/65/R13', 4900)">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Triple J</p>
+    </footer>
+
+    <script src="shop.js"></script>
+</body>
+</html>
